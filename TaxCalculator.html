@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        
+        <link rel='stylesheet' type='text/css' href='TaxCalculator.css'/>
+
+        <script type="text/javascript" src="TaxCalculator.js"> 
+        </script>
+
+        <table id="top"> <!width='100%' border='0'>
+        <tr class='toparea'>
+		<td border='0'>Tax Calculator</td>
+		<td align='right' style='horizontal-align:right'>
+		<img src="https://www.mkblev.co.il/wp-content/uploads/2020/02/1719-Electron-Calculator-600x600-1.jpg" alt="" height="120" width="150">
+		</td></tr>
+        </table>
+    <body>
+        <table>
+            <tr><td>Base Salary: <input type="text" id="mon0" onkeyup="calcGross()" disabled='true'>
+            <input type="checkbox" id="twelve" onchange="setTwelve(this);">For 12 Month &nbsp;&nbsp;&nbsp;
+            gross income: <span id='gross'></span>
+            </td></tr>            
+            <tr id="months"><td><table cellpadding='3' cellspacing='0' border="1" margin:middle;> 
+                <tr><td>January</td><td><input type="text" id="mon1" onkeyup="calcGross()"></td></tr>
+                <tr><td>February</td><td><input type="text" id="mon2" onkeyup="calcGross()"></td></tr>
+                <tr><td>March</td><td><input type="text" id="mon3" onkeyup="calcGross()"></td></tr>
+                <tr><td>April</td><td><input type="text" id="mon4" onkeyup="calcGross()"></td></tr>
+                <tr><td>May</td><td><input type="text" id="mon5" onkeyup="calcGross()"></td></tr>
+                <tr><td>June</td><td><input type="text" id="mon6" onkeyup="calcGross()"></td></tr>
+                <tr><td>July</td><td><input type="text" id="mon7" onkeyup="calcGross()"></td></tr>
+                <tr><td>August</td><td><input type="text" id="mon8" onkeyup="calcGross()"></td></tr>
+                <tr><td>September</td><td><input type="text" id="mon9" onkeyup="calcGross()"></td></tr>
+                <tr><td>October</td><td><input type="text" id="mon10" onkeyup="calcGross()"></td></tr>
+                <tr><td>November</td><td><input type="text" id="mon11" onkeyup="calcGross()"></td></tr>
+                <tr><td>December</td><td><input type="text" id="mon12" onkeyup="calcGross()"></td></tr>
+            </table></td>
+            </tr>
+        </table>    
+        <br>
+
+            Bonus Points: <input type="text" id="mon99" onkeyup="calcGross()">
+        <br>
+        <button id ="myFunction" onclick="calcTax();">Calculate</button>
+        <p id="taxinfo" style="display:none">Total Tax is: <span id="tax"></span></p>
+    </body>
+</html>
